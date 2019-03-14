@@ -2,31 +2,34 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Piece : MonoBehaviour
+namespace Checkers
 {
-    public bool isWhite, isKing;
-    public Vector2Int cell, oldCell;
-
-    private Animator anim;
-
-    // Use this for initialization
-    void Awake()
+    public class Piece : MonoBehaviour
     {
-        //Get reference to animator component
-        anim = GetComponent<Animator>();
-    }
+        public bool isWhite, isKing;
+        public Vector2Int cell, oldCell;
 
-    // Update is called once per frame
-    void Update()
-    {
+        private Animator anim;
 
-    }
+        // Use this for initialization
+        void Awake()
+        {
+            //Get reference to animator component
+            anim = GetComponent<Animator>();
+        }
 
-    public void King()
-    {
-        //This peice is now king
-        isKing = true;
-        //Trigger King animation
-        anim.SetTrigger("King");
+        // Update is called once per frame
+        void Update()
+        {
+
+        }
+
+        public void King()
+        {
+            //This peice is now king
+            isKing = true;
+            //Trigger King animation
+            anim.SetTrigger("King");
+        }
     }
 }
